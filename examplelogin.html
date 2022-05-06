@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+      * {
+        font-family: sans-serif;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background-image: url('\\pexels-marc-mueller-380769.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top left;
+      }
+      body::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: -1;
+        opacity: 0.6;
+        width: 100%;
+        height: 100%;
+      }
+      .login-form {
+        margin-inline: auto;
+        width:23rem;
+      }
+      .txt-field{
+        margin: 30px 0;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:whitesmoke;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      input{
+        font-family: 'FontAwesome';
+      }
+      .btn {
+        align-self: center;
+        box-shadow: 0 4px 4px rgba(0 0 0 / 0.16);
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom:30px;
+      }
+      input{
+        font-size: 18px;
+      }
+      input:placeholder-shown{
+        font-size: 18px;
+      }
+      #btn-submit {
+        border-style: none;
+        padding: 10px 20px;
+        background-color: rgb(53,197,151);
+        color: white;
+        letter-spacing: 1px;
+        font-weight: 700;
+      }
+      
+      #userName,#pwd{
+        height: 3rem;
+        width: 18rem;
+        border-radius: 2px;
+        border: 2px solid grey;
+      }
+      .reset{
+        margin: 30px 0;
+        cursor: pointer;
+        display: flex;
+        justify-content:space-evenly;
+        width: 100%;
+      }
+
+      .form-heading{
+        margin-top:30px;
+        border-bottom: 2px solid silver;
+        width: 100%;
+        text-align: center;
+        padding-bottom:30px;
+      }
+      @media (max-width:500px){
+        form{
+          width: 100vw;
+          position: absolute;
+          top: 0;
+          height: 100vh;
+          margin: 0;
+          padding:0;
+          border-radius:0;
+        }
+        .login-form{
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-form">
+      <form action="GET">
+        <h1 class="form-heading">Login</h1>
+        <div class="txt-field">
+          <input
+            type="text"
+            name="userName"
+            id="userName"
+            minlength="8"
+            placeholder="&nbsp;&nbsp;&#xf007&nbsp;&nbsp;username"
+          />
+        </div>
+        <div class="pass-field">
+          <input
+            type="password"
+            name="pwd"
+            id="pwd"
+            minlength="8"
+            placeholder="&nbsp;&nbsp;&#xf023&nbsp;&nbsp;password"
+          />
+        </div>
+        <div class="reset">
+          <div class="check">
+          <input type="checkbox" name="rem" id="rem">
+          <label for="rem">remember me</label>
+          </div>
+          <p>forget password?</p>
+        </div>
+        <div class="btn">
+          <input type="submit" id="btn-submit" value="Login" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
